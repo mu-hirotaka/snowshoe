@@ -2,12 +2,13 @@
 <html>
 <head>
   <title>Snowshoe</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="/assets/snowshoe.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="min-height: 480px; background-color: rgb(255, 0, 255);">
 
 <%= yield %>
 
