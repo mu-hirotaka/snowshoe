@@ -5,6 +5,7 @@ class StampController < ApplicationController
     client = Snowshoe::Client.new(SNOWSHOE_APP_KEY, SNOWSHOE_APP_SECRET)
     data = { "data" => params["data"] }
     response = client.post(data)
+    logger.debug response
     if response.include? "stamp"
       render json: '{"magic_asset": "http://mydomain.com/super/cool/asset}' 
     else
