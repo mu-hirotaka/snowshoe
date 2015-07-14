@@ -8,7 +8,7 @@ class StampController < ApplicationController
     response = client.post(data)
     logger.debug response
     if response.include? "stamp"
-      render json: '{"magic_asset": "http://mydomain.com/super/cool/asset}' 
+      render json: '{"magic_asset": "http://mydomain.com/super/cool/asset"}' 
     else
       render json: '{"error_asset": "http://mydomain.com/try/again/asset"}' 
     end

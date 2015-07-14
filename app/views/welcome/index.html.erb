@@ -1,11 +1,21 @@
 <canvas id="stamp-screen" class="stamp-screen"></canvas>
 <div id="snowshoe-progress-bar"></div>
 <script>
-    var stampScreenInitData = {
-      "postUrl": "http://54.92.114.30:3000/stamp",
-      // this is the element id of what you want to make stampable
-      // this can be on a canvas, div or the body
-      "stampScreenElmId": "stamp-screen"
+  var stampScreenInitData = {
+    "postUrl": "http://54.92.114.30:3000/stamp",
+    // this is the element id of what you want to make stampable
+    // this can be on a canvas, div or the body
+    "stampScreenElmId": "stamp-screen",
+    "progressBarOn": true,
+    "postViaAjax": true, // post via Ajax
+    "success": function(response) {
+        alert("success");
+        alert(response);
+    },
+    "error": function(response) {
+        alert("error");
+        alert(response);
+    }
   }
 </script>
 <script src="/assets/jquery.snowshoe.js"></script>
